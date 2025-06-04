@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Mi Web{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static',path='css/styles.css') }}">
+</head>
+<body>
+
+    <div class="header">
+        <h2>IMPLANTACIÓN DE APLICACIONES WEB - FASTAPI</h2>
+    </div>
+
+    <ul class="nav-horizontal">
+        <li><a href="/">INICIO</a></li>
+        {% if menu %}
+            {% if menu.home %}
+                <li><a href="">VER HOSPITALES</a></li>
+            {% endif %}
+            {% if menu.add %}
+                <li><a href="">AÑADIR HOSPITALES</a></li>
+                <li><a href="">ELIMINAR HOSPITALES</a></li>
+            {% endif %}
+        {% endif %}
+    </ul>
+
+    <div class="main">
+        {% block content %}{% endblock %}
+    </div>
+
+    <div class="footer">
+        <p>Jeremy Martínez - IMPLANTACIÓN DE APLICACIONES WEB</p>
+    </div>
+
+</body>
+</html>
