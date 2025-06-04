@@ -1,4 +1,4 @@
-import mysql.connector 
+import mysql.connector
 
 database = mysql.connector.connect( # LLAMAMOS AL FUNCION CONNECT PARA CONECTARNOS
     host = "127.0.0.1",

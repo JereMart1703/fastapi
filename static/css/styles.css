@@ -1,8 +1,21 @@
-body {
-  font-family: Arial, Helvetica, sans-serif;
+/* Reset y estilo general */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #f9f9f9;
+}
+
+/* Estructura principal con Flexbox para anclar el footer abajo */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Header */
@@ -45,6 +58,7 @@ body {
 
 /* Main content */
 .main {
+  flex: 10000; /* Esto empuja el footer hacia abajo si hay poco contenido */
   padding: 20px;
 }
 
@@ -53,5 +67,4 @@ body {
   background-color: #f1f1f1;
   text-align: center;
   padding: 15px;
-  margin-top: 20px;
 }
